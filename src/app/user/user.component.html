@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <p>AQUI ESTOY</p>
+    <!--<p *ngFor="let user of users">{{ user.apellido }}</p>-->
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+      <label for="name">Nombre</label><br>
+      <input type="text" id="name" #user.nombre="ngModel" [(ngModel)]="user.nombre" [ngModelOptions]="{standalone: true}"><br>
+      <label for="apellido">Apellido</label><br>
+      <input type="text" id="apellido" #user.apellido="ngModel" [(ngModel)]="user.apellido" [ngModelOptions]="{standalone: true}"><br>
+      <label for="cc">Cédula de ciudadanía</label><br>
+      <input type="number" id="cc" #user.cedula="ngModel" [(ngModel)]="user.cedula" [ngModelOptions]="{standalone: true}"><br>
+      <input type="submit" value="{{title}}" class="btn btn-success" [disabled]="!registerForm">
+      <p> <strong> ¿Lorem ipsum dolor sit amet?</strong></p>
+    </form>
+  </div>
+</div>

@@ -18,7 +18,7 @@ export class UserComponent implements OnInit {
     this.user = new User(
       "",
       "",
-      0
+      null
     );
    }
 
@@ -48,6 +48,7 @@ export class UserComponent implements OnInit {
           }
       },error =>{
         console.log(<any>error);
+        form.reset();
         
       }
     );
